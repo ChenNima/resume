@@ -11,5 +11,9 @@ angular.module('myApp').
             templateUrl: 'js/controllers/home.html',
             controller: 'HomeCtrl'
         })
+        .when('/information', {
+            templateUrl: 'js/controllers/info/info.html',
+            controller: 'InfoCtrl'
+        })
         .otherwise({redirectTo: '/welcome'});
 }]);

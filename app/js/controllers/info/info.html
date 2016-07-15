@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="page-header">
+        <h1>个人资料</h1>
+    </div>
+    <!--<div class="well">-->
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">基本资料</div>
+            <div class="panel-body">
+                <div ng-repeat="(key,value) in baseInfo" class="col-md-6 col-sm-6">
+                    <p>{{key}}</p>
+                    <h3>{{value}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-success">
+            <div class="panel-heading">联系方式</div>
+            <div class="panel-body">
+                Panel content
+            </div>
+        </div>
+    </div>
+    <!--</div>-->
+</div>
