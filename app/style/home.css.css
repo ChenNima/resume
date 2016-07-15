@@ -1,5 +1,5 @@
 .jumbo {
-  margin-top: 5%; }
+  margin-top: 1%; }
 
 .btn-div {
   margin: 10px 0; }
@@ -7,5 +7,8 @@
 .btn-center {
   margin: auto;
   text-align: center; }
+
+.progress-div {
+  z-index: -99; }
 
 /*# sourceMappingURL=home.css.css.map */
