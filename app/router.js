@@ -20,5 +20,10 @@ angular.module('myApp').
             templateUrl: 'js/controllers/edu/edu.html',
             controller: 'EduCtrl'
         })
+
+        .when('/skill', {
+            templateUrl: 'js/controllers/skill/skill.html',
+            controller: 'SkillCtrl'
+        })
         .otherwise({redirectTo: '/welcome'});
 }]);

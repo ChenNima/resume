@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,YAAY;EACV,SAAS,EAAE,IAAI;;AAGjB,UAAU;EACR,MAAM,EAAE,IAAI;EACZ,SAAS,EAAE,IAAI;;AAGjB,UAAU;EACR,MAAM,EAAE,GAAG",
+"sources": ["skill.css.scss"],
+"names": [],
+"file": "skill.css.css"
+}
