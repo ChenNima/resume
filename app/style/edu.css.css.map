@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAW;EACT,MAAM,EAAE,IAAI;EACZ,SAAS,EAAE,IAAI;EACf,aAAG;IACD,OAAO,EAAE,aAAa;EAGxB,oBAAU;IACR,UAAU,EAAC,IAAI;EAGjB,uBAAa;IACX,UAAU,EAAC,IAAI;;AAInB,QAAQ;EACN,SAAS,EAAE,IAAI",
+"sources": ["edu.css.scss"],
+"names": [],
+"file": "edu.css.css"
+}

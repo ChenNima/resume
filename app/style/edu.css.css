@@ -1,0 +1,14 @@
+.edu-table {
+  margin: auto;
+  font-size: 20px; }
+  .edu-table td {
+    padding: 3px 0 3px 5px; }
+  .edu-table .edu-date {
+    text-align: left; }
+  .edu-table .edu-content {
+    text-align: left; }
+
+.tooltip {
+  font-size: 18px; }
+
+/*# sourceMappingURL=edu.css.css.map */

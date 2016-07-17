@@ -15,5 +15,10 @@ angular.module('myApp').
             templateUrl: 'js/controllers/info/info.html',
             controller: 'InfoCtrl'
         })
+
+        .when('/education', {
+            templateUrl: 'js/controllers/edu/edu.html',
+            controller: 'EduCtrl'
+        })
         .otherwise({redirectTo: '/welcome'});
 }]);
