@@ -6,10 +6,13 @@ angular.module('myApp', [
     'ui.bootstrap',
   'ui-notification',
     'localService',
-    'achievementService'
+    'achievementService',
+    'restangular'
 ])
-    .config(['$locationProvider', function($locationProvider) {
+    .config(['$locationProvider','RestangularProvider', function($locationProvider,RestangularProvider) {
   $locationProvider.hashPrefix('!');
+
+      RestangularProvider.setBaseUrl('http://www.mrchen.pub/');
 
   //NotificationProvider.setOptions({
   //  delay: 10000,

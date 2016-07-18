@@ -27,7 +27,7 @@ angular.module('achievementService', [])
                         for(var index in achievement){
                             i++;
                         }
-                        if(i==11){
+                        if(i==12){
                             achievement.all=true;
                             Notification.success({message: '强迫症', title: '成就解锁'});
                             localService.setObject('achievement',achievement);
@@ -47,6 +47,9 @@ angular.module('achievementService', [])
                 if(!achievement.hello){
                     achievement.hello = true;
                     achieve('Hello World!');
+                }else if(!achievement.again){
+                    achievement.again = true;
+                    achieve('又见面了');
                 }
             },
 

@@ -27,12 +27,18 @@
                 <span class="glyphicon glyphicon-thumbs-up"></span>
             </a>
         </div>
-        <div class="progress-div progress progress-striped active col-md-8 col-sm-8 col-xs-8">
-            <div class="progress-bar progress-bar-success" style="width: 45%"></div>
-            <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+        <div class="progress-div col-md-8 col-sm-8 col-xs-8">
+            <!--<div class="progress progress-striped active">-->
+            <!--<div class="progress-bar progress-bar-success" style="width: 45%"></div>-->
+            <!--<div class="progress-bar progress-bar-danger" style="width: 55%"></div>-->
+            <!--</div>-->
+            <uib-progress class="progress-striped active">
+                <uib-bar  value="rate()" type="success">{{likeCount}}</uib-bar>
+                <uib-bar  value="100-rate()" type="danger">{{dislikeCount}}</uib-bar>
+            </uib-progress>
         </div>
         <div class="btn-center col-md-2 col-sm-2 col-xs-2">
-            <a class="btn btn-danger"  ng-click="dislike()">
+            <a class="btn btn-danger" ng-click="dislike()">
                 <span class="glyphicon glyphicon-thumbs-down"></span>
             </a>
         </div>
