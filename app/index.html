@@ -9,8 +9,9 @@
     <link href="//cdn.bootcss.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style/app.css">
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/angular-ui-notification/dist/angular-ui-notification.min.css">
 </head>
-<body>
+<body ng-controller="RootCtrl">
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
     <div class="navbar-header">
@@ -29,7 +30,7 @@
                 <li><a href="#!/information">个人信息</a></li>
                 <li><a href="#!/education">经历背景</a></li>
                 <li><a href="#!/skill">专业技能</a></li>
-                <li><a>成就</a></li>
+                <li><a href="#!/achievement">成就</a></li>
             </ul>
         </div>
     </div>
@@ -38,8 +39,8 @@
 
 <div class="main-content" ng-view></div>
 
-
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
 <!--<script src="bootstrap/dist/js/bootstrap.min.js"></script>-->
 <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <!--<script src="angular/angular.min.js"></script>-->
@@ -52,16 +53,25 @@
 <script src="//cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
 
 <script src="//cdn.bootcss.com/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.js"></script>
+
+<script src="lib/angular-ui-notification/dist/angular-ui-notification.js"></script>
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
 <script src="app.js"></script>
 <script src="router.js"></script>
 
+<script src="js/services/localService.js"></script>
+<script src="js/services/achievementService.js"></script>
+
+<script src="notification.js"></script>
 <script src="js/controllers/homeCtrl.js"></script>
+<script src="js/controllers/rootCtrl.js"></script>
 <script src="js/controllers/info/infoCtrl.js"></script>
 <script src="js/controllers/edu/eduCtrl.js"></script>
 <script src="js/controllers/skill/skillCtrl.js"></script>
+<script src="js/controllers/achievement/achievementCtrl.js"></script>
+<script src="js/controllers/hidden/hiddenCtrl.js"></script>
 
 <link rel="stylesheet" href="style/edu.css.css">
 <link rel="stylesheet" href="style/application.css.css">

@@ -4,7 +4,11 @@
 angular.module('myApp')
     .controller('EduCtrl',[
         '$scope',
-        function($scope){
+        'achievementService',
+        function($scope,achievementService){
+            achievementService.readPage(3);
+            achievementService.quickRead(3);
+
             $scope.ostengar = {
                 时间:'2014.11-2015.8',
                 职位:'实习开发工程师',

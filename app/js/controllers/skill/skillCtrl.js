@@ -4,9 +4,14 @@
 angular.module('myApp')
     .controller('SkillCtrl',[
         '$scope',
-        function($scope){
+        'achievementService',
+        function($scope,achievementService){
+            achievementService.readPage(4);
+            achievementService.quickRead(4);
+
             $scope.frount = {
-                'Angular.js': '熟练'
+                'Angular.js': '熟练',
+                'Bootstrap':'熟练'
             };
 
             $scope.back = {
@@ -24,6 +29,7 @@ angular.module('myApp')
                 'jenkins':'掌握'
             };
             $scope.other = {
+                'Github':'熟练',
                 'Photoshop': '熟练',
                 '敏捷开发':'掌握',
                 '英语':'CET6'

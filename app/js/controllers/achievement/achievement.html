@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="page-header">
+        <h1>成就</h1>
+        <h4 class="text-muted">找出页面中隐藏的元素解锁成就</h4>
+    </div>
+    <div class="col-md-4 col-sm-6" ng-repeat="achieve in achieveItems">
+        <div ng-class="{'panel':true, 'panel-default':!achievement[achieve.key],'panel-success':achievement[achieve.key]}">
+            <div class="panel-heading">
+                <span ng-show="achievement[achieve.key]" class="glyphicon glyphicon-ok"></span>
+                <span ng-show="!achievement[achieve.key]" class="glyphicon glyphicon-lock"></span>
+                {{achieve.title}}
+            </div>
+            <div class="panel-body">
+                {{achievement[achieve.key]?achieve.content:'该成就未解锁'}}
+            </div>
+        </div>
+    </div>
+</div>

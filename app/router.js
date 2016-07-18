@@ -25,5 +25,13 @@ angular.module('myApp').
             templateUrl: 'js/controllers/skill/skill.html',
             controller: 'SkillCtrl'
         })
+        .when('/achievement', {
+            templateUrl: 'js/controllers/achievement/achievement.html',
+            controller: 'AchievementCtrl'
+        })
+        .when('/hired', {
+            template: '<div></div>',
+            controller: 'HiddenCtrl'
+        })
         .otherwise({redirectTo: '/welcome'});
 }]);

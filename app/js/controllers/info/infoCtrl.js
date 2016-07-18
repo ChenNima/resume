@@ -4,7 +4,20 @@
 angular.module('myApp')
     .controller('InfoCtrl',[
         '$scope',
-        function($scope){
+        'achievementService',
+        function($scope,achievementService){
+
+            achievementService.readPage(2);
+            achievementService.quickRead(2);
+
+            $scope.code = function(){
+                achievementService.code();
+            };
+
+            $scope.steam = function(){
+                achievementService.steam();
+            };
+
             $scope.baseInfo = {
                 姓名:'陈逸斐',
                 性别:'男',

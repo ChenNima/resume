@@ -4,7 +4,17 @@
 angular.module('myApp')
     .controller('HomeCtrl',[
         '$scope',
-        function($scope){
+        'achievementService',
+        function($scope,achievementService){
+            achievementService.readPage(1);
+            achievementService.quickRead(1);
 
+            $scope.like = function(){
+                achievementService.like();
+            };
+
+            $scope.dislike = function(){
+                achievementService.dislike();
+            }
         }
     ]);
