@@ -4,41 +4,37 @@
     </div>
     <div class="jumbotron col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <h1>陈逸斐的个人简历</h1>
-        <p>在这里你可以更详细地了解我,点击下面的按钮查看不同分类的自我介绍,在各个页面内也可以点击导航栏切换</p>
+        <p>欢迎来到我的个人简历页面(•̀ᴗ•́)و,在下列按钮或者导航栏切换可以更详细地了解我,同时还有十几个成就可以挑战</p>
         <p>
-            <small><em>本页面也也自适应移动端</em></small>
+            <small><em>//也对移动端做了自适应哦</em></small>
         </p>
         <div class="btn-div col-lg-2 col-md-3 col-sm-3 col-xs-6">
-            <a class="btn btn-primary btn-lg" href="#!/information">个人信息</a>
+            <a class="btn btn-primary btn-lg" href="#!/information"><span class="glyphicon glyphicon-user"></span> 个人信息</a>
         </div>
         <div class="btn-div col-lg-2 col-md-3 col-sm-3 col-xs-6">
-            <a class="btn btn-success btn-lg" href="#!/education">经历背景</a>
+            <a class="btn btn-success btn-lg" href="#!/education"><span class="glyphicon glyphicon-book"></span> 经历背景</a>
         </div>
         <div class="btn-div col-lg-2 col-md-3 col-sm-3 col-xs-6">
-            <a class="btn btn-warning btn-lg" href="#!/skill">专业技能</a>
+            <a class="btn btn-warning btn-lg" href="#!/skill"><span class="glyphicon glyphicon-wrench"></span> 专业技能</a>
         </div>
         <div class="btn-div col-lg-2 col-md-3 col-sm-3 col-xs-6">
-            <a class="btn btn-danger btn-lg" href="#!/achievement">成就</a>
+            <a class="btn btn-link btn-lg" href="#!/achievement"><span class="glyphicon glyphicon-tower"></span>成就</a>
         </div>
     </div>
     <div class="col-md-8 col-sm-12">
-        <div class="btn-center col-md-2 col-sm-2 col-xs-2">
-            <a class="btn btn-success " ng-click="like()">
+        <div class="btn-left col-md-2 col-sm-2 col-xs-2">
+            <a class="btn btn-success " ng-click="like()" uib-tooltip="不错嘛">
                 <span class="glyphicon glyphicon-thumbs-up"></span>
             </a>
         </div>
-        <div class="progress-div col-md-8 col-sm-8 col-xs-8">
-            <!--<div class="progress progress-striped active">-->
-            <!--<div class="progress-bar progress-bar-success" style="width: 45%"></div>-->
-            <!--<div class="progress-bar progress-bar-danger" style="width: 55%"></div>-->
-            <!--</div>-->
-            <uib-progress class="progress-striped active">
-                <uib-bar  value="rate()" type="success">{{likeCount}}</uib-bar>
-                <uib-bar  value="100-rate()" type="danger">{{dislikeCount}}</uib-bar>
+        <div class="col-md-8 col-sm-8 col-xs-8">
+            <uib-progress class="progress-striped active progress-div">
+                <uib-bar  value="rate()" type="success" class="like-text">{{likeCount}}</uib-bar>
+                <uib-bar  value="100-rate()" type="danger" class="dislike-text">{{dislikeCount}}</uib-bar>
             </uib-progress>
         </div>
-        <div class="btn-center col-md-2 col-sm-2 col-xs-2">
-            <a class="btn btn-danger" ng-click="dislike()">
+        <div class="btn-right col-md-2 col-sm-2 col-xs-2">
+            <a class="btn btn-danger" ng-click="dislike()" uib-tooltip="什么鬼?">
                 <span class="glyphicon glyphicon-thumbs-down"></span>
             </a>
         </div>

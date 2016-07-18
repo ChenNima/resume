@@ -6,6 +6,7 @@ angular.module('myApp')
         '$scope',
         'achievementService',
         function($scope,achievementService){
+            console.log('成就系统好玩吗?');
             achievementService.hello();
             achievementService.stay();
         }
