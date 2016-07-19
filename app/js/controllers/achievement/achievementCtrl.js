@@ -19,6 +19,7 @@ angular.module('myApp')
                 new achieveItem('hello','Hello World','printf(\"Hello World\");'),
                 new achieveItem('readPage','详细了解','有你感兴趣的内容吗?'),
                 new achieveItem('quickRead','快速阅读','你一定有很多简历要看'),
+                new achieveItem('contra','魂斗罗','30条命!'),
                 new achieveItem('code','Talk is cheap','\"Give me the code!\"'),
                 new achieveItem('steam','蒸汽动力','喜+1'),
                 new achieveItem('again','又见面了','cout<<\"Hello World\"<<endl;'),

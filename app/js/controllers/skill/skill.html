@@ -1,14 +1,16 @@
 <div class="container">
     <div class="page-header">
-        <h2>编程技能</h2>
+        <h2>编程技能<small class="text-muted">//主要语言为JAVA/JavaScript</small></h2>
     </div>
+    <div class="row">
     <div class="col-md-6">
         <div class="panel panel-default">
-            <div class="panel-heading"><span class="ion-social-angular"></span> 前端</div>
+            <div class="panel-heading"><span class="ion-social-angular text-danger"></span> 前端</div>
             <div class="panel-body">
                 <ul class="nav nav-pills">
                     <li ng-repeat="(key,value) in frount" class="badge-box">
-                        <a ng-class="{'label':true,'label-success':value=='了解','label-primary':value=='掌握','label-danger':value=='熟练',}">{{key}}<span class="badge">{{value}}</span></a>
+                        <a ng-class="{'label':true,'label-success':value=='了解','label-primary':value=='掌握','label-danger':value=='熟练',}">{{key}}<span
+                                class="badge">{{value}}</span></a>
                     </li>
                 </ul>
                 <div class="panel-con">
@@ -26,16 +28,17 @@
 
     <div class="col-md-6">
         <div class="panel panel-default">
-            <div class="panel-heading well-content"><span class="ion-social-nodejs"></span> 后端</div>
+            <div class="panel-heading well-content"><span class="ion-social-nodejs text-success"></span> 后端</div>
             <div class="panel-body">
                 <ul class="nav nav-pills">
                     <li ng-repeat="(key,value) in back" class="badge-box">
-                        <a ng-class="{'label':true,'label-success':value=='了解','label-primary':value=='掌握','label-danger':value=='熟练',}">{{key}}<span class="badge">{{value}}</span></a>
+                        <a ng-class="{'label':true,'label-success':value=='了解','label-primary':value=='掌握','label-danger':value=='熟练',}">{{key}}<span
+                                class="badge">{{value}}</span></a>
                     </li>
                 </ul>
                 <div class="panel-con">
                     <p>
-                        两次实习中均参与过后台的开发。SpringMVC与Ruby on Rails参加了功能模块的开发，而Node有项目搭建经验。
+                        两次实习中均参与过后台的开发。SpringMVC与Ruby on Rails参加了功能模块的开发，而Node有项目搭建经验，并使用WebSocket搭建过在线聊天室。
                     <p>
                     <p>
                         熟悉CMS系统的开发，了解与数据库(MySQL,MangoDB)的交互逻辑以及框架(Mybatis,Mongoose)。
@@ -48,14 +51,18 @@
             </div>
         </div>
     </div>
+        </div>
+
+    <div class="row">
 
     <div class="col-md-6">
         <div class="panel panel-default">
-            <div class="panel-heading well-content"><span class="ion-social-android"></span> 客户端</div>
+            <div class="panel-heading well-content"><span class="ion-social-android text-success"></span> 客户端</div>
             <div class="panel-body">
                 <ul class="nav nav-pills">
                     <li ng-repeat="(key,value) in app" class="badge-box">
-                        <a ng-class="{'label':true,'label-success':value=='了解','label-primary':value=='掌握','label-danger':value=='熟练',}">{{key}}<span class="badge">{{value}}</span></a>
+                        <a ng-class="{'label':true,'label-success':value=='了解','label-primary':value=='掌握','label-danger':value=='熟练',}">{{key}}<span
+                                class="badge">{{value}}</span></a>
                     </li>
                 </ul>
                 <div class="panel-con">
@@ -82,7 +89,8 @@
             <div class="panel-body">
                 <ul class="nav nav-pills">
                     <li ng-repeat="(key,value) in server" class="badge-box">
-                        <a ng-class="{'label':true,'label-success':value=='了解','label-primary':value=='掌握','label-danger':value=='熟练',}">{{key}}<span class="badge">{{value}}</span></a>
+                        <a ng-class="{'label':true,'label-success':value=='了解','label-primary':value=='掌握','label-danger':value=='熟练',}">{{key}}<span
+                                class="badge">{{value}}</span></a>
                     </li>
                 </ul>
                 <div class="panel-con">
@@ -96,24 +104,37 @@
             </div>
         </div>
     </div>
+        </div>
     <div class="col-md-12">
-    <div class="page-header">
-        <h2>其他技能</h2>
-    </div>
-    <div class="well">
-        <ul class="nav nav-pills">
-            <li ng-repeat="(key,value) in other" class="badge-box">
-                <a ng-class="{'label':true,'label-success':value=='了解','label-primary':value=='掌握'||'CET6','label-danger':value=='熟练',}">{{key}}<span class="badge">{{value}}</span></a>
-            </li>
-        </ul>
-        <div class="panel-con">
-        <p>
-            总共四年的学生会宣传部经验让我学会了扎实的Photoshop技巧，对前端编程有非常大的帮助。
-        <p>
-        <p>
-            实习过程中掌握了敏捷开发的思想和Scrum开发过程。
-        </p>
+        <div class="page-header">
+            <h2>其他技能</h2>
+        </div>
+        <div class="col-md-6">
+            <div class="well">
+                <ul class="nav nav-pills">
+                    <li ng-repeat="(key,value) in other" class="badge-box">
+                        <a ng-class="{'label':true,'label-success':value=='了解','label-primary':value=='掌握'||'CET6','label-danger':value=='熟练',}">{{key}}<span
+                                class="badge">{{value}}</span></a>
+                    </li>
+                </ul>
+                <div class="panel-con">
+                    <p>
+                        总共四年的学生会宣传部经验让我学会了扎实的Photoshop技巧，对前端编程有非常大的帮助。
+                    <p>
+                    <p>
+                        实习过程中掌握了敏捷开发的思想和Scrum开发过程。
+                    </p>
+                </div>
             </div>
-    </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading well-content"><span class="ion-android-bulb text-warning"></span> 继续学习..</div>
+                <div class="panel-body">
+                    <p><strong>React Native, iOS开发, 中间件技术, Hadoop家族...</strong></p>
+                    <p>各种技能树等着去点亮,一直的走在深入学习与学习新技术的道路上</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

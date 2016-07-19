@@ -27,7 +27,7 @@ angular.module('achievementService', [])
                         for(var index in achievement){
                             i++;
                         }
-                        if(i==12){
+                        if(i==13){
                             achievement.all=true;
                             Notification.success({message: '强迫症', title: '成就解锁'});
                             localService.setObject('achievement',achievement);
@@ -135,6 +135,12 @@ angular.module('achievementService', [])
                 if(!achievement.hired){
                     achievement.hired = true;
                     achieve('Hired!');
+                }
+            },
+            contra:function(){
+                if(!achievement.contra){
+                    achievement.contra = true;
+                    achieve('魂斗罗');
                 }
             }
 
