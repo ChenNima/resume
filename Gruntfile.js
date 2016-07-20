@@ -32,15 +32,17 @@ module.exports = function(grunt) {
     copy: {
       dev: {
         files: [
-          {src: ['app/index.html'], dest: 'tmp/index.html'},
-          {expand: true, cwd: 'app/lib/bootstrap/dist/fonts', src: ['**'], dest: 'tmp/assets/fonts'},
+          {src: ['app/index-async.html'], dest: 'tmp/index.html'},
+          {expand: true, cwd: 'app/lib/bootstrap/dist/fonts', src: ['**'], dest: 'tmp/fonts'},
+          {expand: true, cwd: 'app/bower_components/Ionicons/fonts', src: ['**'], dest: 'tmp/fonts'}
         ]
       },
 
       prod: {
         files: [
-          {src: ['app/index.html'], dest: 'dist/index.html'},
-          {expand: true, cwd: 'app/lib/bootstrap/dist/fonts', src: ['**'], dest: 'dist/assets/fonts'},
+          {src: ['app/index-async.html'], dest: 'dist/index.html'},
+          {expand: true, cwd: 'app/lib/bootstrap/dist/fonts', src: ['**'], dest: 'dist/fonts'},
+          {expand: true, cwd: 'app/bower_components/Ionicons/fonts', src: ['**'], dest: 'dist/fonts'}
         ]
       }
     },
@@ -52,7 +54,7 @@ module.exports = function(grunt) {
         },
         src: [
 
-          //'app/bower_components/angular/angular.js',
+          'app/bower_components/angular/angular.js',
           'app/bower_components/jquery/dist/jquery.js',
           'app/lib/bootstrap/dist/js/bootstrap.js',
 
@@ -107,7 +109,7 @@ module.exports = function(grunt) {
         base: 'app'
       },
       main: {
-        src: ['app/**/*.html'],
+        src: ['app/js/**/*.html'],
         dest: 'tmp/assets/templates.js'
       }
     },
@@ -172,18 +174,15 @@ module.exports = function(grunt) {
     if (env === 'dev') {
       grunt.config.set('version', '');
       grunt.config.set('debug', true);
-      //grunt.task.run('clean', 'ejs', `copy:${env}`, 'html2js', 'browserify', 'ngAnnotate', 'concat', 'less');
-      grunt.task.run(`copy:${env}`,'html2js','browserify');
+      grunt.task.run(`copy:${env}`,'html2js','browserify','concat',`cssmin:${env}`);
     } else if (env === 'prod') {
       grunt.config.set('debug', false);
-      grunt.task.run(`copy:${env}`,'html2js','browserify','ngAnnotate', 'uglify',`cssmin:${env}`);
-      //grunt.task.run('clean', 'ejs', `copy:${env}`, 'html2js', 'browserify', 'ngAnnotate', 'concat', 'less', 'uglify', 'cssmin');
+      grunt.task.run(`copy:${env}`,'html2js','browserify','concat', 'uglify',`cssmin:${env}`);
     } else {
       throw Error(`Unkown params env = ${env} for build assets task.`);
     }
   });
 
-  //grunt.registerTask('server', ['build:dev', 'connect:server', 'watch']);
-  grunt.registerTask('server', ['build:dev']);
+  grunt.registerTask('server',['build:dev', 'connect:server', 'watch']);
   grunt.registerTask('production', ['build:prod']);
 };
