@@ -10,6 +10,10 @@ angular.module('myApp')
             achievementService.readPage(1);
             achievementService.quickRead(1);
 
+            $scope.code = function(){
+                achievementService.code();
+            };
+
             $scope.likeCount = 0;
             $scope. dislikeCount = 0;
 
