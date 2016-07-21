@@ -18,9 +18,9 @@ module.exports = function(grunt) {
     ngAnnotate: {
       app: {
         files: {
-          'tmp/assets/app.js': ['tmp/assets/app.js'],
+          'tmp/assets/app.js': ['tmp/assets/app.js']
         }
-      },
+      }
     },
 
     clean: {
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
     concat: {
       js: {
         options: {
-          separator: ';',
+          separator: ';'
         },
         src: [
 
@@ -141,7 +141,7 @@ module.exports = function(grunt) {
         livereload: true
       },
       src: {
-        files: ['app/index.ejs', 'app/**/*.js', 'app/**/*.html', 'app/**/*.less', 'public/js/**/*.js'],
+        files: [ 'app/**/*.js', 'app/**/*.html', 'app/**/*.css'],
         tasks: ['build:dev']
       }
     },

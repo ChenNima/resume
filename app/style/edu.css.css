@@ -1,6 +1,6 @@
 .edu-table {
   margin: auto;
-  font-size: 15px; }
+  font-size: 15px !important; }
   .edu-table td {
     padding: 3px 0 3px 5px; }
   .edu-table .edu-date {

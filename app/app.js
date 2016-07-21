@@ -14,14 +14,4 @@ angular.module('myApp', [
         $locationProvider.hashPrefix('!');
 
         RestangularProvider.setBaseUrl('http://www.mrchen.pub/');
-
-        //NotificationProvider.setOptions({
-        //  delay: 10000,
-        //  startTop: 20,
-        //  startRight: 10,
-        //  verticalSpacing: 20,
-        //  horizontalSpacing: 20,
-        //  positionX: 'left',
-        //  positionY: 'bottom'
-        //});
     }]);
