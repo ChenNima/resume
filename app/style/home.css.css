@@ -13,11 +13,11 @@
   padding-left: 0; }
 
 .like-text {
-  text-align: right;
+  text-align: right !important;
   padding-right: 10px; }
 
 .dislike-text {
-  text-align: left;
+  text-align: left !important;
   padding-left: 10px; }
 
 .progress-div {
