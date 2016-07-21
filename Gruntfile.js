@@ -89,7 +89,7 @@ module.exports = function(grunt) {
       prod: {
         files: {
           'dist/assets/vendor.css': ['tmp/assets/vendor.css'],
-          'dist/assets/app.css': ['tmp/assets/app.css']
+          'dist/assets/app.css': ['app/style/*.css']
         }
       }
     },
