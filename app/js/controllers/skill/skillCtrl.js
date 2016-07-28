@@ -33,6 +33,9 @@ angular.module('myApp')
                 'Photoshop': '熟练',
                 '敏捷开发':'掌握',
                 '英语':'CET6'
+            };
+            $scope.learn = {
+                'PHP':'学习中'
             }
         }
     ]);
