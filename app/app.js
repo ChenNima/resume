@@ -13,5 +13,5 @@ angular.module('myApp', [
     .config(['$locationProvider', 'RestangularProvider', function ($locationProvider, RestangularProvider) {
         $locationProvider.hashPrefix('!');
 
-        RestangularProvider.setBaseUrl('http://www.mrchen.pub/');
+        RestangularProvider.setBaseUrl('https://www.mrchen.pub/');
     }]);
